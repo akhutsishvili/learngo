@@ -8,6 +8,11 @@
 
 package main
 
+import (
+	"fmt"
+	"os"
+)
+
 // ---------------------------------------------------------
 // EXERCISE: Greet More People
 //
@@ -29,7 +34,14 @@ package main
 
 func main() {
 	// TYPE YOUR CODE HERE
-
+	names := os.Args[1:]
+	if len(names) < 3 {
+		fmt.Println("There are less than  3 poeple")
+		return
+	}
+	println("first %s", names[0])
+	println("second %s", names[1])
+	println("third %s", names[2])
 	// BONUS #1:
 	// Observe the error if you pass less then 3 arguments.
 	// Search on the web how to solve that.

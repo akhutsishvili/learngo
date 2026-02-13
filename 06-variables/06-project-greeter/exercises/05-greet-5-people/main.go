@@ -8,6 +8,11 @@
 
 package main
 
+import (
+	"fmt"
+	"os"
+)
+
 // ---------------------------------------------------------
 // EXERCISE: Greet 5 People
 //
@@ -33,4 +38,13 @@ package main
 
 func main() {
 	// TYPE YOUR CODE HERE
+	names := os.Args[1:]
+	if len(names) < 5 {
+		fmt.Println("There are less than 5 poeple")
+		return
+	}
+	for i := 0; i < len(names); i++ {
+		fmt.Println("Hello great", names[i], "!")
+	}
+	fmt.Println("Nice to meet you all.")
 }
