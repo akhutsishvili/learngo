@@ -14,3 +14,11 @@
 *.out
 
 .vscode/*
+
+# Ignore extensionless files (Go binaries)
+*
+!*/
+!*.*
+!Makefile
+!LICENSE
+!README
